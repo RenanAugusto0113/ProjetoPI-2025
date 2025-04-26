@@ -40,8 +40,8 @@ nav {
 }
 nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 16px;
+  margin: 8px;
+  padding: 0px;
 }
 nav ul li {
   display: block;
@@ -49,7 +49,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  padding: 14px 20px;
+  padding: 8px;
   display: block;
   transition: all 0.8s ease;
   border-radius: 8px;
@@ -59,6 +59,7 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #00000032;
   color: orange;
+  border-color: orange;
 }
 article {
   background-color: #121212;
@@ -101,21 +102,19 @@ footer #direitos_autorais{
 }
 
 #menuToggle {
-  position: relative;
-  right: -200px;
-  top: 8px;
-  z-index: 1000;
+  position: absolute;
+  right: -32px;
+  top: 0px;
   background: transparent;
   color: white;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
 }
 #menuToggle:hover {
   color: orange;
@@ -124,13 +123,12 @@ footer #direitos_autorais{
 
 /* Estilo inicial do menu (escondido à esquerda) */
 .menu-nav {
-  position: fixed;
-  left: -200px;
-  top: 341px;
-  width: 250px;
+  position: absolute;
+  left: -256px;
+  width: 256px;
+  margin-top: 342px;
   background: #161616;
   transition: all 0.3s ease;
-  z-index: 512;
 }
 .menu-nav.active {
   left: 0; /* Mostra o menu */
@@ -152,6 +150,6 @@ article , img{
 }
 .saibamais-button:hover {
     background-color: orange;
-    color: black
+    color: black;
 }
  
