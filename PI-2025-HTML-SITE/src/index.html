@@ -3,13 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAGINA DO EXERCICIO DIA 24</title>
-    <link rel="stylesheet" href="../css/estilo.css">
-    <script src="../js/estilo.js"></script>
+    <title>Casa das Portas & Janelas - Home</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const menuNav = document.querySelector('.menu-nav');
+
+            menuToggle.addEventListener('click', function() {
+                menuNav.classList.toggle('active');
+                // Altera o ícone
+                menuToggle.textContent = menuNav.classList.contains('active') ? '✕' : '☰';
+            });
+        });
+    </script>
+    <style>
+        /* Não usem mais arquivos.css ou script.js para modificar o style ou
+        O codigo da pagina, a maioria dos navegadores atuais não acessam mais
+        diretorios locais por uma questão de segurança, o que quebra o codigo
+        na hora de fazer o "<link rel="stylesheet" href="../script.js">" */
+
+        * { box-sizing: border-box; }
+        
+        body {
+        background-color: grey;
+        font-family: Arial, sans-serif;;
+        margin: 0;
+        padding: 0;
+        }
+        
+        header {
+        /* Use links do Imgur para mostrar imagens */
+        background-image: url("https://i.imgur.com/GgvSref.jpeg");
+        background-size: cover;
+        background-position: center;
+        color: orange;
+        text-align: center;
+        }
+
+        div {
+        display : flex;
+        min-height: 100vh;
+        }
+
+        #minas{
+        background-image: url(" vai um banner");
+        }
+
+        header h2 {
+        margin-right: 200px;
+        }
+        
+        nav {
+        background-color: #161616;
+        width: 256px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        }
+        nav ul {
+        list-style-type: none;
+        margin: 8px;
+        padding: 0px;
+        }
+        nav ul li {
+        display: block;
+        }
+        nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 8px;
+        display: block;
+        transition: all 0.8s ease;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: transparent;
+        }
+        nav ul li a:hover {
+        background-color: #00000032;
+        color: orange;
+        border-color: orange;
+        }
+
+        article {
+        background-color: #121212;
+        color: grey;
+        padding: 20px;
+        height: 100vh;
+        text-align: center;
+        flex: 1;
+        }
+        
+        section::after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        
+        footer {
+        background-color: #080808;
+        color: orange;
+        font-size: 10px;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        }
+        footer #direitos_autorais{
+        margin-top:440px ;
+        color:orange;
+        }
+        
+        @media (max-width: 600px) {
+        nav, article {
+            width: 100%;
+            height: auto;
+        }
+        }
+
+        #menuToggle {
+        position: absolute;
+        right: -32px;
+        top: 0px;
+        background: transparent;
+        color: white;
+        border: none;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        #menuToggle:hover {
+        color: orange;
+        background: #00000032;
+        }
+        
+
+        /* Estilo inicial do menu (escondido à esquerda) */
+        .menu-nav {
+        position: absolute;
+        left: -256px;
+        width: 256px;
+        margin-top: 342px;
+        background: #161616;
+        transition: all 0.3s ease;
+        }
+        .menu-nav.active {
+        left: 0; /* Mostra o menu */
+        }
+
+        article , img{
+        text-align:center;
+        }
+
+        .saibamais-button {
+        width: 20%;
+        padding: 8px;
+        background-color: transparent;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.4s ease;
+        }
+        .saibamais-button:hover {
+            background-color: orange;
+            color: black;
+        }
+ 
+    </style>
 </head>
 <body>
     <header>
-        <img src="../img/iconshadow.webp" alt="banner da empresa portas e janelas">
+        <img src="https://i.imgur.com/WjQXW9m.png" alt="banner da empresa portas e janelas">
     </header>
     <div>
         <nav class="menu-nav">
@@ -19,10 +186,10 @@
                 <li><a href="gestaoEstoque.html">Gestão de Estoque</a></li>
                 <li><a href="gestaoStatusEntrega.html">Status de Entrega</a></li>
             </ul>
-            <button id="menuToggle">☰</button>
+            <button id="menuToggle" onclick="toggleMenu()">☰</button>
         </nav>
         <article>
-            <img src="../img/icon.webp" alt="banner da empresa portas e janelas" style="width: 16%; margin: 4%;">
+            <img src="https://i.imgur.com/PyMG0DH.png" alt="banner da empresa portas e janelas" style="width: 16%; margin: 4%;">
             <h1 style="color: white;">LOJA PORTAS E JAENELAS</h1>
             <p> 
                 A empresa já está no ramo de vendas de portas, janelas e telas para mosquitos há mais de 25 anos, 
