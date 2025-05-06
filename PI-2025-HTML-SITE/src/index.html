@@ -4,18 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa das Portas & Janelas - Home</title>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('menuToggle');
-            const menuNav = document.querySelector('.menu-nav');
-
-            menuToggle.addEventListener('click', function() {
-                menuNav.classList.toggle('active');
-                // Altera o ícone
-                menuToggle.textContent = menuNav.classList.contains('active') ? '✕' : '☰';
-            });
-        });
-    </script>
     <style>
         /* Não usem mais arquivos.css ou script.js para modificar o style ou
         O codigo da pagina, a maioria dos navegadores atuais não acessam mais
@@ -27,6 +15,9 @@
         body {
         background-color: grey;
         font-family: Arial, sans-serif;;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         margin: 0;
         padding: 0;
         }
@@ -55,33 +46,31 @@
         
         nav {
         background-color: #161616;
-        width: 256px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
+        width: 100%;
+        position: absolute;
         }
         nav ul {
         list-style-type: none;
-        margin: 8px;
-        padding: 0px;
         }
         nav ul li {
-        display: block;
+        display: inline-block;
+        border: #404040 solid 1px;
+        border-radius: 16px;
+        background-color: #808080;
+        padding: 4px 8px;
+        margin: -4px 8px;
         }
+        /* remover foramtação do link html */
         nav ul li a {
-        color: white;
         text-decoration: none;
-        padding: 8px;
-        display: block;
-        transition: all 0.8s ease;
-        border-radius: 8px;
-        cursor: pointer;
-        background-color: transparent;
+        color: black;
+        display: inline-block;
         }
-        nav ul li a:hover {
-        background-color: #00000032;
-        color: orange;
-        border-color: orange;
+        nav ul li:hover{
+            border: orangered solid 1px;
+            border-radius: 16px;
+            background-color: orange;
+            cursor: pointer;
         }
 
         article {
@@ -93,64 +82,20 @@
         flex: 1;
         }
         
-        section::after {
-        content: "";
-        display: table;
-        clear: both;
-        }
-        
         footer {
         background-color: #080808;
         color: orange;
-        font-size: 10px;
+        font-size: 12px;
         position: fixed;
-        bottom: 0px;
+        bottom: 0%;
         width: 100%;
-        }
-        footer #direitos_autorais{
-        margin-top:440px ;
-        color:orange;
         }
         
         @media (max-width: 600px) {
         nav, article {
             width: 100%;
             height: auto;
-        }
-        }
-
-        #menuToggle {
-        position: absolute;
-        right: -32px;
-        top: 0px;
-        background: transparent;
-        color: white;
-        border: none;
-        width: 32px;
-        height: 32px;
-        cursor: pointer;
-        border-radius: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        }
-        #menuToggle:hover {
-        color: orange;
-        background: #00000032;
-        }
-        
-
-        /* Estilo inicial do menu (escondido à esquerda) */
-        .menu-nav {
-        position: absolute;
-        left: -256px;
-        width: 256px;
-        margin-top: 342px;
-        background: #161616;
-        transition: all 0.3s ease;
-        }
-        .menu-nav.active {
-        left: 0; /* Mostra o menu */
+            }
         }
 
         article , img{
@@ -186,10 +131,9 @@
                 <li><a href="gestaoEstoque.html">Gestão de Estoque</a></li>
                 <li><a href="gestaoStatusEntrega.html">Status de Entrega</a></li>
             </ul>
-            <button id="menuToggle" onclick="toggleMenu()">☰</button>
         </nav>
         <article>
-            <img src="https://i.imgur.com/PyMG0DH.png" alt="banner da empresa portas e janelas" style="width: 16%; margin: 4%;">
+            <img src="https://i.imgur.com/WjQXW9m.png" alt="banner da empresa portas e janelas" style="width: 16%; margin: 4%;">
             <h1 style="color: white;">LOJA PORTAS E JAENELAS</h1>
             <p> 
                 A empresa já está no ramo de vendas de portas, janelas e telas para mosquitos há mais de 25 anos, 
@@ -204,8 +148,6 @@
             <button type="submit" id="btn" class="saibamais-button">Saiba Mais!</button>
         </article>
     </div>
-    <footer style="text-align: center;">
-        Ⓒ 2025 Alunos da UNIFEOB - Ciência da Computação. Todos os direitos reservados.
-    </footer>
+    <footer>Ⓒ 2025 Alunos da UNIFEOB - Ciência da Computação. Todos os direitos reservados.</footer>
 </body>
 </html>
